@@ -55,7 +55,10 @@ es = elasticsearch.Elasticsearch(['https://eogdata.mines.edu:9200'], verify_cert
 
 
 index_client = elasticsearch.client.IndicesClient(es)
-index_client.delete(index="user-list")
+try:
+    index_client.delete(index="user-list")
+except:
+    pass
 
 actions = [
   {
