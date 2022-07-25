@@ -2,16 +2,13 @@ services:
   filebeat:
     image: docker.elastic.co/beats/filebeat:${VERSION}
     network_mode: "host"
-    command: bash -c "filebeat setup && filebeat -e"
     volumes:
-      - elk-stack-compose_certs:/usr/share/filebeat/certs
+      - ../certs:/usr/share/filebeat/certs:z
       - data:/usr/share/filebeat/data
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:z
       - /u/au/ac/zlee/elastic:/usr/share/filebeat/logs_mount:z
     user: root
 
 volumes:
-  elk-stack-compose_certs:
-    external: true
   data:
     driver: local
