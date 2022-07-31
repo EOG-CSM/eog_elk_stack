@@ -8,6 +8,16 @@ $ cd main_elk_compose
 $ sudo docker-compose up -d
 ```
 
+### Copy the ca.crt
+
+The docker containers should have generated a certificate authority in `certs/`. This folder should also be owned by root. Copy the ca.crt to the base repo dir and change it so you have access rights.
+
+```
+$ cd path/to/repo/
+# cp certs/ca/ca.crt 
+# chown <your-username> ca.crt # or appropriate chmod
+```
+
 ## Filebeat setup
 
 ### Get the API key
@@ -37,4 +47,8 @@ $ cd /path/to/repo
 $ cd filebeat
 $ sudo /path/to/docker-compose up -d
 ```
-Note: if this don't work, omit the `-d` to see what the container is printing to stdout.
+Note: if this doesn't work, omit the `-d` to see what the container is printing to stdout.
+
+## Ranking Users and Countries
+
+See [rank_users.md](rank_users.md) and [rank_countries.md](rank_countries.md).
