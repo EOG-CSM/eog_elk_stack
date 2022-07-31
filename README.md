@@ -77,7 +77,7 @@ Note: if this doesn't work, omit the `-d` to see what the container is printing 
 
 1. Click menu on the left (3 lines), then under Analytics, click dashboard.
 2. Click create new visualization.
-3. From the left, drag source.geo.country\_name into the graph
+3. From the left, drag `source.geo.country_name` into the graph
 4. Click the top 5 values, and change the number of values to whatever you want
 5. Then follow the steps below depending on how you want to rank.
 

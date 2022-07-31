@@ -35,7 +35,7 @@ output.elasticsearch:
   ssl.certificate_authorities: ["/usr/share/filebeat/certs/ca/ca.crt"]
   
   # Authentication credentials - either API key or username/password.
-  api_key: "mjoYM4IB7ohfSH3zlwSP:fNftnFRfRRa9A2i8VNFY4w"
+  api_key: ""
 
 processors:
   - add_host_metadata:

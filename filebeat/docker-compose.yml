@@ -6,7 +6,7 @@ services:
       - ../certs:/usr/share/filebeat/certs:z
       - data:/usr/share/filebeat/data
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:z
-      - /u/au/ac/zlee/elastic:/usr/share/filebeat/logs_mount:z
+      - /var/log/httpd:/usr/share/filebeat/logs_mount:z
     user: root
 
 volumes:
